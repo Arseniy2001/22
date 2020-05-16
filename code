@@ -1,0 +1,83 @@
+\documentclass[a4paper,14pt,twoside]{extreport}
+\usepackage{geometry}
+\geometry{a4paper,top=15mm, right=25mm, bottom=15mm,left=25mm}
+\usepackage{cmap}     % поиск в PDF
+\usepackage[T2A]{fontenc}   % кодировка
+\usepackage[utf8]{inputenc}   % кодировка исходного текста
+\usepackage[english,russian]{babel} % локализация и переносы
+\usepackage{amssymb} % для русских >= <=
+\usepackage{setspace} % Для изменения междустрочного интервала
+\usepackage{amsthm}
+\usepackage{fancybox,fancyhdr}
+\pagestyle{fancy}% колонтитулы и номера страниц
+\fancyhf{}
+\fancyhead [LE,RO] { \thepage }%номер страницы 
+\fancyhead [CE] {\itГлава 11 } 
+\fancyhead [CO] {„ $\frac{0}{0}$ “\it и аналогичные выражения }
+\setcounter{page}{158} 
+\begin{document}
+\begin{large}
+\begin{spacing}{0.8}
+\textbf {Теорема 192. }{\it Пусть $n \geqslant 1$ целое,}
+$$\lim_{\omega= \xi}{f^{(\gamma)}(x)}=0,$$
+$$\lim_{\omega= \xi}{g^{(\gamma)}(x)}=0$$
+{\it для всех целых }$\gamma$ с $0\leqslant\gamma<n,$
+\begin{center}
+  $f^{(n)}(\xi)$ {\it существует,}\\
+  $g^{(n)}(\xi)\neq0.$
+\end{center}
+{\it Тогда}
+$$\lim_{\omega= \xi}\frac{{f}(x)}{{g}(x)}=\frac{{f}^{(n)}(\xi)}{{g}^{(n)}(\xi)}.$$
+\indent\textbf {Предварительное замечание.\indent}{Очивидно, теорема 192 не содержится в теореме 191, рвно как и ,обратно, теорема 191 не содержится в теореме 192.}\\
+\indent{Д о к а з а т е л ь с т в о.\indent}{При $n=1$ это -- теорема 187. Пусть поэтому $n>1$. В силу теоремы 187, примененной к $f^{(n-1)}(x)$ вместо $f(x)$ и $g^{(n-1)}(x)$ вместо $g(x)$ имеем}
+$$\lim_{\omega= \xi}\frac{{f}^{(n-1)}(x)}{{g}^{(n-1)}(x)}=\frac{{f}^{(n)}(\xi)}{{g}^{(n)}(\xi)}.$$
+Следовательно, в силу теоремы 191 с заменой {\it n} на {\it n} -- 1
+$$\lim_{\omega= \xi}\frac{{f}(x)}{{g}(x)}=\frac{{f}^{(n)}(\xi)}{{g}^{(n)}(\xi)}.$$
+\indent\textbf {Определение 43. }{\it Если для каждого $\omega$ существует $\varepsilon>0$ такое, что}
+\begin{center}
+$f(x)>\omega$ {\it при} $0<|x-\xi|<\varepsilon,$
+\end{center}
+{\it то говорят, что}
+$$\lim_{\omega= \xi}{f(x)}=\infty,$$
+{\it или, короче,}
+$$f(x)\rightarrow \infty$$
+(„при $x\rightarrow \xi$“).\\
+\indent\textbf{Пример. }{\indent\indent\indent\indent\indent $\xi=0,$}
+\begin{center}
+    $f(x)=\frac{1}{|x|}$ при $x\neq0.$
+\end{center} 
+\newpage
+\indent\textbf{Теорема 193. }{\indent\indent $\lim\limits_{\omega= \xi}{|f(x)|}=\infty$}\\
+{\it равносильно}
+$$\lim_{\omega= \xi}\frac{1}{f(x)}=0.$$
+\indent{Д о к а з а т е л ь с т в о. }{И то и другое означает: для каждого $\delta>0$ существует $\varepsilon >0$ такое, что}
+\begin{center}
+    $|\frac{1}{f(x)}|<\delta$ при $0<|x-\xi|<\varepsilon.$
+\end{center}
+\indent\indent\textbf{Определение 44. }{\itЕсли}
+$$\lim_{\omega= \xi}{(-f(x))}=\infty,$$
+{\it то говорят, что}
+$$\lim_{\omega= \xi}{f(x)}=-\infty,$$
+{\it или, короче,}
+$$f(x)\rightarrow -\infty$$
+(„при $x\rightarrow \xi$“).\\
+\indent$-\infty$ читается: минус бесконченость.\\
+\indent\textbf {Пример.}
+$$\xi=0,$$
+\begin{center}
+$f(x)=\log|x|$ при $x \neq 0.$
+\end{center}
+Соотношение
+$$\lim_{\omega= \xi}{f(x)}=-\infty$$
+следует из того, что
+\begin{center}
+$-\log|x|>\omega$ при $0<|x|<e^{-\omega}.$
+\end{center}
+\indent\indent\textbf{Теорема 193. }{\it Из}
+$$\lim\limits_{\omega= \xi}{|g(x)|}=\infty,$$
+$$\lim_{\omega= \xi}\frac{{f}'(x)}{{g}'(x)}=0$$
+{\it следует}
+$$\lim_{\omega= \xi}\frac{{f}(x)}{{g}(x)}=0.$$
+\end{spacing}
+\end{large}
+\end{document}
